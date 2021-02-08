@@ -1,4 +1,5 @@
 function bruteForceTwoSum(array, sum) {
+<<<<<<< HEAD
   const twoSums = [];
   
   for (let i = 0; i < array.length - 1; i++) {
@@ -7,10 +8,31 @@ function bruteForceTwoSum(array, sum) {
       const n2 = array[j];
       if (n + n2 === sum) {
         twoSums.push([n, n2]);
+=======
+  const twoSum = [];
+  
+  // array.forEach((n, i) => {
+  //   array.forEach((n2, j) => {
+  //     if (n + n2 === sum && i !== j) {
+  //       twoSum.push([n, n2]);
+  //     }
+  //   })
+  // })
+  
+  while (array.length > 2) {
+    const n = array[0];
+    for(let i = 0; i++; i < array.length) {
+      const n2 = array[i];
+      if (n + n2 === sum) {
+        twoSum.push([n, n2]);
+        array.splice(0, 1);
+        array.splice(i, 1);
+>>>>>>> 1830d2beceb54f2d8495c378ef834735ee764a85
       }
     }
   }
   
+<<<<<<< HEAD
   return twoSums;
 }
 
@@ -69,4 +91,19 @@ function hashTwoSum(array, sum) {
   })
   
   return twoSums;
+=======
+  return twoSum;
+}
+
+function binarySearchTwoSum(array, sum) {
+  
+}
+
+function binaryMatch(sortedArray, missingNum) {
+  
+}
+
+function hashTwoSum(array, sum) {
+  
+>>>>>>> 1830d2beceb54f2d8495c378ef834735ee764a85
 }
